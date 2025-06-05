@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>C & C  Cabeleireiros</title>
+    <link rel="icon" href="https://files.catbox.moe/d1uurb.jpg" type="image/x-icon" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <link rel="icon" href="logo.png" />
+  <style>
+    :root {
+      --cor-primaria: #22c55e;
+      --cor-secundaria: #f97316;
+    }
+    [data-theme="dark"] {
+      --tw-bg-opacity: 1;
+      background-color: #0f172a;
+      color: white;
+    }
+    .theme-toggle {
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      z-index: 50;
+    }
+  </style>
+</head>
+<body class="transition-all duration-300 ease-in-out bg-white text-gray-900 dark:bg-slate-900 dark:text-white">
+
+  <!-- Botão de troca de tema -->
+
+
+  <!-- Header -->
+  <header class="w-full py-4 bg-green-500 text-white shadow-md sticky top-0 z-40">
+    <div class="max-w-6xl mx-auto flex justify-between items-center px-4">
+      <!-- Espaço para logo -->
+   
+  <img src="https://files.catbox.moe/d1uurb.jpg" alt="Logo" width="40" style="margin-right: 40px;">
+  <span style="color: white; font-size: 10px;"></span>
+</nav>
+      <nav class="space-x-4">
+        <a href="#produtos" class="hover:underline">fotos</a>
+        <a href="#sobre" class="hover:underline">Quem Somos</a>
+        <a href="#contato" class="hover:underline">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="min-h-[70vh] flex items-center justify-center bg-gradient-to-r from-green-400 to-lime-400 text-white text-center px-4">
+    <div>
+      <h1 class="text-4xl md:text-6xl font-bold mb-4">Bem-vindo a C & C cabeleireiros</h1>
+      <p class="text-lg md:text-xl">Seu estilo começa aqui.</p>
+    </div>
+  </section>
+
+  <!-- Produtos -->
+  <section id="produtos" class="py-16 px-4 max-w-6xl mx-auto">
+    <h2 class="text-3xl font-bold text-center mb-10">Nossa instalação</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+      <!-- Produto 1 -->
+      <div class="bg-white dark:bg-slate-800 p-4 rounded-xl shadow hover:scale-105 transform transition">
+        <img src="https://files.catbox.moe/hlh3d0.webp" alt="Arroz" class="rounded-md mb-2 w-full">
+        <h3 class="text-xl font-semibold">Visual Externo</h3>
+        <p></p>
+      </div>
+      <!-- Produto 2 -->
+      <div class="bg-white dark:bg-slate-800 p-4 rounded-xl shadow hover:scale-105 transform transition">
+        <img src="https://files.catbox.moe/j5vi7j.webp" alt="Feijão" class="rounded-md mb-2 w-full">
+        <h3 class="text-xl font-semibold">Material de qualidade</h3>
+        <p></p>
+      </div>
+      <!-- Produto 3 -->
+      <div class="bg-white dark:bg-slate-800 p-4 rounded-xl shadow hover:scale-105 transform transition">
+        <img src="https://files.catbox.moe/7e3kmx.webp" alt="Café" class="rounded-md mb-2 w-full">
+        <h3 class="text-xl font-semibold">Espaço amplo</h3>
+        <p></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quem somos -->
+  <section id="sobre" class="py-16 bg-gray-100 dark:bg-slate-800 px-4 text-center">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-3xl font-bold mb-6">Quem Somos</h2>
+      <p class="text-lg">
+        No coração de um espaço com 12 cabeleireiros, a C & C se destaca com atendimento personalizado, cortes modernos e cuidado especial com adultos e crianças. Estilo, conforto e atenção em cada detalhe.
+      </p>
+    </div>
+  </section>
+
+  <!-- Contato -->
+  <section id="contato" class="py-16 px-4 text-center">
+    <h2 class="text-3xl font-bold mb-4">Fale com a gente</h2>
+    <p class="mb-4">Estamos no WhatsApp! Tire dúvidas, marque horários</p>
+    <a href="https://wa.me/5514997443981" target="_blank" class="bg-green-500 text-white px-6 py-3 rounded-full hover:bg-green-600 transition inline-block">Chamar no WhatsApp</a>
+  </section>
+
+  <!-- Rodapé -->
+  <footer class="bg-green-500 text-white text-center py-6 mt-10">
+    <p>&copy; 2025 C & C. Todos os direitos reservados.</p>
+    <p>Endereço: R. José Thiago, 31A - Vila Nova Botucatu, Botucatu - SP, 18608-130</p>
+  </footer>
+
+  <!-- Botão flutuante WhatsApp -->
+  <a href="https://wa.me/5514997443981" class="fixed bottom-6 right-6 bg-green-500 p-4 rounded-full shadow-lg hover:scale-110 transition" target="_blank" aria-label="WhatsApp">
+    <img src="https://cdn-icons-png.flaticon.com/512/124/124034.png" class="w-6 h-6" alt="WhatsApp">
+  </a>
+
+  <!-- Scripts -->
+  <script>
+    // ScrollReveal animações
+    ScrollReveal().reveal('section', { 
+      distance: '50px',
+      duration: 1000,
+      easing: 'ease-out',
+      origin: 'bottom',
+      reset: false
+    });
+
+    // Troca de tema claro/escuro
+    const btn = document.getElementById('toggleTheme');
+    const html = document.documentElement;
+    btn.addEventListener('click', () => {
+      const atual = html.getAttribute('data-theme');
+      html.setAttribute('data-theme', atual === 'dark' ? 'light' : 'dark');
+    });
+  </script>
+</body>
+</html>
